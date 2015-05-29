@@ -16,7 +16,7 @@ module.exports = function(router) {
 				if (err) {
 					console.log(err);
 					return res.status(500).json({msg: 'server error'});
-				};
+				}
 				console.log('json file written to data folder');
 			});
 			res.json(noteObject);
@@ -28,7 +28,7 @@ module.exports = function(router) {
 			if (err) {
 				console.log(err);
 				return res.status(500).json({msg: 'server error'});
-			};
+			}
 			console.log('get request received');
 			res.json(data);
 		}); 
@@ -41,7 +41,7 @@ module.exports = function(router) {
 				if (err) {
 					console.log(err);
 					return res.status(500).json({msg: 'server error'});
-				};
+				}
 				console.log('json file replaced in data folder');
 			});
 			res.json(noteObject);
@@ -54,7 +54,7 @@ module.exports = function(router) {
 				if (err) {
 					console.log(err);
 					return res.status(500).json({msg: 'server error'});
-				};
+				}
 			});
 			console.log('json file deleted from data folder');
 			res.json({msg: 'successful deletion'});
